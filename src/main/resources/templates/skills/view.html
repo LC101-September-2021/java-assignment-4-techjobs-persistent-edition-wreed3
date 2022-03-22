@@ -13,6 +13,7 @@
     <p> Jobs:
         <ul>
             <li th:each="job : ${skill.jobs}">
+<!--                (updated ${skill.jobs} to {jobs})-->
                 <a th:href="@{'/view/' + ${job.id}}" th:text="${job.name}"></a>
             </li>
         </ul>
