@@ -139,10 +139,10 @@ public class TestTaskFour extends AbstractTest {
         Class homeControllerClass = getClassByName("controllers.HomeController");
         Method processAddJobFormMethod = homeControllerClass.getMethod("processAddJobForm", Job.class, Errors.class, Model.class, int.class, List.class);
 //        This code is giving some error on line 142 and 143
-//        new Expectations() {{
-//            skillRepository.findAllById((Iterable<Integer>) any);
-//            job.setSkills((List<Skill>) any);
-//        }};
+        new Expectations() {{
+            skillRepository.findAllById((Iterable<Integer>) any);
+            job.setSkills((List<Skill>) any);
+        }};
 
         Model model = new ExtendedModelMap();
         HomeController homeController = new HomeController();
